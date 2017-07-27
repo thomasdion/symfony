@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="col-sm-3"> 
+  <img src={{ avatar_url }} class="thumbnail img-responsive" alt="fuckface" />
+   <h1>{{ name }}</h1>
+   <h2>{{ login }}</h2>
+   <ul class="list-unstyled">
+   {% for detail in details %}
+       <li>{{ detail }}</li>
+   {% endfor %}   
+   </ul>
+   <ul class="list-inline">
+	{% for key,value in socials %}
+	     <li><span class="social-metric-count">{{ value }} </span>
+	     <br>
+	      <span class="small muted">{{ key }}</span></li>	
+   {% endfor %}   	     
+   </ul>
+</div>  
+
+<div class="col-sm-9">
+    susi
+</div>
+{% endblock %}
+
+{% block stylesheets %}
+<style>
+</style>
+{% endblock %}

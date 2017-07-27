@@ -2,21 +2,20 @@
 
 {% block body %}
 {% include "header.html.twig" %}
+{% include ":first:sidebar-profile.html.twig" %}
+
    <main class="bs-docs-home">
-    <div id="wrapper">
-        <div id="container">
-            <div id="welcome">
-				<span class="bs-docs-booticon bs-docs-booticon-lg bs-docs-booticon-outline">F</span>            
-				 <p class="lead">This is the facts page </p>
-
-            <div id="next">
-                <h2>What's next?</h2>
-
-        </div>
-    </div>
+		<div id="wrapper">
+			<div id="container">      
+				<div id="welcome">
+					<h1><span>This is the  </span> facts page {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}</h1>
+				</div>
+				<div id="next">
+					<h2>What's next?</h2>
+			</div>
+		</div>
     </main>
 {% endblock %}
-
 {% block stylesheets %}
 <style>
 </style>
