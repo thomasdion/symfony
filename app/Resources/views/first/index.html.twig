@@ -3,7 +3,8 @@
 
 {% block body %}
 {% include "header.html.twig" %}
-{% include ":first:sidebar-profile.html.twig" %}
+{#{% include ":first:sidebar-profile.html.twig" %}#}
+{{ render ( controller('AppBundle:First:profile', { 'username': username}))}}
 
    <main class="bs-docs-home ">
     <div id="wrapper">
@@ -18,7 +19,7 @@
 								<h3 class="panel-title">Repo Properties</h3>
 								</div>
 								<div class="panel-body">
-											{% include "repos.html.twig" %}
+										{% include "repos.html.twig" %}											
 									</div>
 						</div>	
     </div>
