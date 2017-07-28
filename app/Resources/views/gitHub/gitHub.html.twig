@@ -4,23 +4,25 @@
 {% block body %}
 {% include "header.html.twig" %}
 {#{% include ":first:sidebar-profile.html.twig" %}#}
-{{ render ( controller('AppBundle:First:profile', { 'username': username}))}}
 
    <main class="bs-docs-home ">
     <div id="wrapper">
         <div id="container">
+        <div style="z-index: -1"></div>
+
+        {{ render ( controller('AppBundle:gitHub:profile', { 'username': username,'gitHubApi':gitHubApi }))}}
+
             <div id="welcome">
                 <h1><span>Welcome to</span> Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}</h1>
             </div>
-
-
+            
 						<div class="panel panel-default ">
 								<div class="panel-heading">
 								<h3 class="panel-title">Repo Properties</h3>
 								</div>
 								<div class="panel-body">
-										{% include "repos.html.twig" %}											
-									</div>
+										{{ render( controller('AppBundle:gitHub:repos', {'username': username,'gitHubApi':gitHubApi}))}}					
+								</div>
 						</div>	
     </div>
     </main>

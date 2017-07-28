@@ -31,19 +31,16 @@ class GitHubApi {
 		return($properties);					
 	}
 	
-	public function getRepo($username) {
+	public function getRepos($username) {
 		
  		$client = new \GuzzleHttp\Client();
  		$res = $client->request('GET', 'https://api.github.com/users/'.$username.'/repos');
 		$obj = json_decode($res->getBody()->getContents(), true);
-		//var_dump($obj);
-		$properties = array();
-	    $properties = array("name"=>$obj[0]["name"],
-				   "url"=>$obj[1],
-				   "stargazers_count"=>$obj[2],
-				   "description"=>$obj[3]	
-		); 
-		
+	    $properties = array (
+				"repo_count" =>  3,
+				"most_stars"=>"Code Review Videos",
+				"repos" => $obj
+		); 		
 		return($properties);					
 	}
 		
