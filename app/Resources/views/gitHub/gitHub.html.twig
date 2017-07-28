@@ -8,8 +8,6 @@
    <main class="bs-docs-home ">
     <div id="wrapper">
         <div id="container">
-        <div style="z-index: -1"></div>
-
         {{ render ( controller('AppBundle:gitHub:profile', { 'username': username,'gitHubApi':gitHubApi }))}}
 
             <div id="welcome">
@@ -18,13 +16,13 @@
             
 						<div class="panel panel-default ">
 								<div class="panel-heading">
-								<h3 class="panel-title">Repo Properties</h3>
+									<h3 class="panel-title">Repo Properties</h3>
 								</div>
 								<div class="panel-body">
 										{{ render( controller('AppBundle:gitHub:repos', {'username': username,'gitHubApi':gitHubApi}))}}					
 								</div>
 						</div>	
-    </div>
+        </div>
     </main>
 {% endblock %}
 

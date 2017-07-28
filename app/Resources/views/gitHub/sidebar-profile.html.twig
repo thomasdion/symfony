@@ -6,16 +6,24 @@
    <h1>{{ name }}</h1>
    <h2>{{ login }}</h2>
    <ul class="list-unstyled">
-   {% for detail in details %}
-       <li>{{ detail }}</li>
-   {% endfor %}   
+   {# before we read array inside array {% for detail in details %}#}
+       <li>{{ company }}</li>
+       <li>{{ location }}</li>
+       <li>{{ blog }}</li>       
+   {#{% endfor %} #}
    </ul>
    <ul class="list-inline">
-	{% for key,value in socials %}
-	     <li><span class="social-metric-count">{{ value }} </span>
+	{# before we read array inside array{% for key,value in socials %}#}
+	     <li><span class="social-metric-count"> public_gists</span>
 	     <br>
-	      <span class="small muted">{{ key }}</span></li>	
-   {% endfor %}   	     
+	      <span class="small muted">{{ public_gists }}</span></li>	
+	     <li><span class="social-metric-count"> followers</span>
+	     <br>
+	      <span class="small muted">{{ followers }}</span></li>	
+	     <li><span class="social-metric-count"> following</span>
+	     <br>
+	      <span class="small muted">{{ following }}</span></li>		      	      
+   {#{% endfor %}#}   	     
    </ul>
 </div>  
 

@@ -12,11 +12,11 @@ class GitHubController extends Controller {
 
 
 /**
-  * @Route("/{username}", name="homepage", defaults ={"username":"codereviewvideos"});
+  * @Route("/", name="homepage");
 */
-	public function gitHubAction(Request $request, GitHubApi $gitHubApi, $username) {
+	public function gitHubAction(Request $request) {
 
-		return $this->render('gitHub/gitHub.html.twig', array("username"=>$username,"gitHubApi"=>$gitHubApi));
+		return $this->render('home.html.twig');
 	}
 	
 /**
@@ -36,7 +36,7 @@ class GitHubController extends Controller {
 	
 		$repoData = $gitHubApi->getRepos($username);
 		
-		return $this->render('repos.html.twig', $repoData);
+		return $this->render('gitHub/gitHub.html.twig', array("username"=>$username,"gitHubApi"=>$gitHubApi));
   }	  
 }		
 ?>

@@ -11,3 +11,11 @@ body {
 .container {
 	width:50%;
 }	
+.profile {
+	float:left;
+	z-index:10;
+}
+.repos {
+	float:right;
+	z-index:15;
+}
