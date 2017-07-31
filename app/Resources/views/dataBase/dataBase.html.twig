@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% include "header.html.twig" %}
+{#{% include ":first:sidebar-profile.html.twig" %}#}
+
+   <main class="bs-docs-home ">
+    <div id="wrapper">
+        <div id="container">
+            <div id="welcome">
+                <h1><span>Welcome to</span> Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}</h1>
+            </div>
+            
+						<div class="panel panel-default ">
+								<div class="panel-heading">
+									<h3 class="panel-title">Data Base Properties</h3>
+								</div>
+								<div class="panel-body">
+								
+								</div>
+						</div>	
+        </div>
+    </main>
+{% endblock %}
+
+{% block stylesheets %}
+<style>
+</style>
+{% endblock %}
