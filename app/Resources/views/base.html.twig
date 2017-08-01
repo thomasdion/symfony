@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+<<<<<<< HEAD
         <title>{% block title %}Welcome To My first Symfony Project!{% endblock %}</title>
         {% block stylesheets %}
 			<link rel="stylesheet" type="text/css" href="{{ asset('css/mystyle.css') }}" />
@@ -9,6 +10,13 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body class="starter-template">
+=======
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+>>>>>>> master
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
