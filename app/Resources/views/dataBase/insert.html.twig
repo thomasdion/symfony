@@ -1,0 +1,15 @@
+{{ include('header.html.twig')}}
+{% block body %}
+
+	<div class="jumbotron">
+	  <h2>Users Table</h2>
+	  <p>Insert new user</p>
+	  <p>
+		{{ form_start(form)}}
+		{{ form_widget(form)}}
+		{{ form_end(form)}}
+	  </p>
+	  <p><a class="btn btn-primary btn-lg" href="{{ path('database')}}" role="button">BACK</a></p>
+	</div>
+
+{% endblock %}

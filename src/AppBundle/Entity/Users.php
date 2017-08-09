@@ -25,7 +25,7 @@ public $login;
 /**
  * @ORM\Column(type="string", length=20)
  */
-public $visitWith;
+public $visitwith;
 
 public function setUserID($userID) {
 	
@@ -35,9 +35,9 @@ public function setLogin($login) {
 	
 		$this->login = $login;
 }
-public function setVisitWith($visitWith) {
+public function setVisitWith($visitwith) {
 	
-		$this->visitWith = $visitWith;
+		$this->visitwith = $visitwith;
 }
 }
 	
