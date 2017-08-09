@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% include "header.html.twig" %}
+ 
+	<div class="jumbotron">
+	  <h1>Symfony Doctrine</h1>
+	  <p>Database Connectivite--Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}</p>
+						<div class="panel panel-default ">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										 {{ insert }}
+									</h3>									
+								</div>
+   							    <p><a class="btn btn-primary btn-lg" href="{{ path('database')}}" role="button">BACK</a></p>
+						</div>		  
+ 	</div>
+{% endblock %}
+
+

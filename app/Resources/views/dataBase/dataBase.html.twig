@@ -2,28 +2,30 @@
 
 {% block body %}
 {% include "header.html.twig" %}
-{#{% include ":first:sidebar-profile.html.twig" %}#}
-
-   <main class="bs-docs-home ">
-    <div id="wrapper">
-        <div id="container">
-            <div id="welcome">
-                <h1><span>Welcome to</span> Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}</h1>
-            </div>
-            
+ 
+	<div class="jumbotron">
+	  <h1>Symfony Doctrine</h1>
+	  <p>Database Connectivite--Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}</p>
 						<div class="panel panel-default ">
 								<div class="panel-heading">
-									<h3 class="panel-title">Data Base Properties</h3>
+									<h3 class="panel-title">
+										 Select Your Database Action
+									</h3>									
 								</div>
-								<div class="panel-body">
-								
-								</div>
-						</div>	
-        </div>
-    </main>
+ 									 <nav class="collapse navbar-collapse" id=bs-navbar>
+										<ul class="nav navbar-nav">
+										  <li> <a href="{{path('insert')}}">Insert Data</a>
+										  </li>					  
+										  <li> <a href="{{ path('repos') }}">Retrieve Data</a>
+										  </li>	
+										  <li> <a href="{{ path('profile') }}">Change Data</a>
+										  </li>		
+										  <li> <a href="{{ path('database') }} ">Delete Data </a>
+										  </li>		  
+										</ul>
+									  </nav>								 
+						</div>		  
+ 	</div>
 {% endblock %}
 
-{% block stylesheets %}
-<style>
-</style>
-{% endblock %}
+
